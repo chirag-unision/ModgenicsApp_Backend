@@ -33,6 +33,17 @@ app.get('/', (req, res)=>{
     res.send('Hey there! This is Modgenics App backend.'+process.env.DB_HOST);
 });
 
+app.get('/test/', (req, res)=>{
+    const randomText = () =>
+      alternateCapitals(
+          Math.random()
+              .toString(36)
+              .replace(/[^a-z0-9]+/g, '').substring(2, 8)
+    );
+    let a= randomText();
+    res.send(a);
+});
+
 //Middleware
 function middleDB(req, res, next) {
   req.db = db;
