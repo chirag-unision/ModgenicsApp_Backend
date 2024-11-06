@@ -5,7 +5,7 @@ require('dotenv').config()
 const path = require('path');
 const { registerFont } = require('canvas');
 
-registerFont(path.join(__dirname, 'fonts', 'MyFont.otf'), { family: 'MyFont' });
+registerFont('./fonts/MyFont.otf', { family: 'MyFont' });
 
 var app = express();
 var port = process.env.PORT || 3100;
