@@ -8,7 +8,7 @@ const randomText = () =>
   alternateCapitals(
       Math.random()
           .toString(36)
-          .replace(/[^a-z0-9]+/g, '').substring(2, 8)
+          .substring(2, 8)
   );
 
 const drawLines = (ctx) => {
@@ -25,7 +25,7 @@ const FONTSIZE = 35;
 const relativeFont = width => {
   const ratio = FONTSIZE / FONTBASE;
   const size = width * ratio;
-  return `${size}px serif`;
+  return `${size}px Arial, sans-serif`;
 };
 
 const arbitraryRandom = (min, max) => Math.random() * (max - min) + min;
@@ -53,12 +53,12 @@ const generate = (width, height) => {
   ctx.fillRect(0, 0, width, height);
   drawLines(ctx);
 
-  // ctx.setTransform((Math.random() / 10) + 0.9,    //scalex
-  //     0.1 - (Math.random() / 5),      //skewx
-  //     0.1 - (Math.random() / 5),      //skewy
-  //     (Math.random() / 10) + 0.9,     //scaley
-  //     (Math.random() * 20) + 10,      //transx
-  //     100);                           //transy
+  ctx.setTransform((Math.random() / 10) + 0.9,    //scalex
+      0.1 - (Math.random() / 5),      //skewx
+      0.1 - (Math.random() / 5),      //skewy
+      (Math.random() / 10) + 0.9,     //scaley
+      (Math.random() * 20) + 10,      //transx
+      100);                           //transy
 
   return {
       image: canvas.toDataURL(),
