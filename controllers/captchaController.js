@@ -8,7 +8,7 @@ const randomText = () =>
   alternateCapitals(
       Math.random()
           .toString(36)
-          .substring(2, 8)
+          .replace(/[^a-z0-9]+/g, '').substring(2, 8)
   );
 
 const drawLines = (ctx) => {
