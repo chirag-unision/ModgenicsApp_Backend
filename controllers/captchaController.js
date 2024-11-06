@@ -53,12 +53,12 @@ const generate = (width, height) => {
   ctx.fillRect(0, 0, width, height);
   drawLines(ctx);
 
-  ctx.setTransform((Math.random() / 10) + 0.9,    //scalex
-      0.1 - (Math.random() / 5),      //skewx
-      0.1 - (Math.random() / 5),      //skewy
-      (Math.random() / 10) + 0.9,     //scaley
-      (Math.random() * 20) + 10,      //transx
-      100);                           //transy
+  // ctx.setTransform((Math.random() / 10) + 0.9,    //scalex
+  //     0.1 - (Math.random() / 5),      //skewx
+  //     0.1 - (Math.random() / 5),      //skewy
+  //     (Math.random() / 10) + 0.9,     //scaley
+  //     (Math.random() * 20) + 10,      //transx
+  //     100);                           //transy
 
   return {
       image: canvas.toDataURL(),
