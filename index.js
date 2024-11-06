@@ -35,11 +35,10 @@ app.get('/', (req, res)=>{
 
 app.get('/test/', (req, res)=>{
     const randomText = () =>
-      alternateCapitals(
           Math.random()
               .toString(36)
               .replace(/[^a-z0-9]+/g, '').substring(2, 8)
-    );
+
     let a= randomText();
     res.send(a);
 });
