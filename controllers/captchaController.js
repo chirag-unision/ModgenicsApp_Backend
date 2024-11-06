@@ -25,7 +25,7 @@ const FONTSIZE = 35;
 const relativeFont = width => {
   const ratio = FONTSIZE / FONTBASE;
   const size = width * ratio;
-  return `${size}px Arial, sans-serif`;
+  return `${size}px MyFont`;
 };
 
 const arbitraryRandom = (min, max) => Math.random() * (max - min) + min;
